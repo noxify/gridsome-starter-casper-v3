@@ -38,6 +38,11 @@ export default {
     HeaderPartial,
     NavbarPartial,
     FooterPartial
+  },
+  metaInfo: {
+    bodyAttrs: {
+      class: "m-0"
+    }
   }
 }
 </script>
