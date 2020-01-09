@@ -13,7 +13,10 @@ module.exports = {
       use: 'gridsome-plugin-tailwindcss',
       options: {
         tailwindConfig: './tailwind.config.js',
-        purgeConfig: {},
+        purgeConfig: {
+          whitelist: ['svg-inline--fa'],
+          whitelistPatterns: [/fa-$/
+        },
         presetEnvConfig: {},
         shouldPurge: true,
         shouldImport: true,
