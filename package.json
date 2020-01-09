@@ -1,0 +1,33 @@
+{
+  "name": "gridsome-starter-casper-v3",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.4.0",
+    "@noxify/gridsome-remark-classes": "^1.0.0",
+    "gridsome": "^0.7.0",
+    "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "tailwindcss": "^1.1.4",
+    "tailwindcss-dark-mode": "^1.1.1",
+    "tailwindcss-gradients": "^2.3.1",
+    "tailwindcss-tables": "^0.4.0",
+    "tailwindcss-transitions": "^2.1.0",
+    "pluralize": "^8.0.0",
+    "v-tooltip": "^2.0.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "gridsome-plugin-tailwindcss": "^2.2.28"
+  }
+}

@@ -1,0 +1,134 @@
+@tailwind base;
+
+blockquote {
+  @apply border-l;
+  @apply border-l-4;
+  @apply border-l-blue-500;
+  @apply pl-16;
+  @apply italic;
+  @apply my-8;
+
+  p {
+    padding: 0 !important;
+  }
+}
+
+pre {
+  @apply border-l;
+  @apply border-l-2;
+  @apply border-l-gray-500;
+  @apply pl-4;
+  @apply mt-4;
+  @apply text-base;
+  @apply break-words;
+  @apply overflow-x-auto;
+}
+
+:not(pre)>code {
+  @apply text-red-600;
+  @apply text-base;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+@responsive {
+  .pxi-0 {
+    @apply px-0 #{!important};
+  }
+
+  .pyi-0 {
+    @apply py-0 #{!important};
+  }
+
+  .pi-0 {
+    @apply p-0 #{!important};
+  }
+}
+
+.animated-link:after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  transition: 300ms;
+  @apply bg-gray-500;
+}
+
+.animated-link:hover:after {
+  width: 100%;
+}
+
+.height-30px {
+  height:30px;
+}
+
+.no-border {
+  border-width: 0px !important;
+}
+
+.flex-post {
+  @apply border-b;
+  @apply border-b-gray-300;
+  @apply flex-col;
+  @apply w-full;
+
+  .post-card-image {
+    @apply h-56;
+    @apply w-full;
+    @apply object-cover;
+    @apply rounded;
+    @apply relative;
+  }
+
+  .post-card-title {
+    @apply leading-none;
+    @apply text-2xl;
+    @apply font-medium;
+  }
+
+  .post-card-excerpt {
+    @apply font-serif;
+  }
+}
+
+.author-list-item:nth-child(n+2) {
+  @apply -ml-3
+}
+
+@media (min-width: 768px) {
+  .with-large>.flex-post:nth-child(6n+1) {
+    @apply flex-100;
+    @apply flex-row;
+
+    .post-card-image-link {
+      @apply flex-auto;
+      @apply relative;
+      min-height: 380px;
+      @apply mr-6;
+    }
+
+    .post-card-image {
+      @apply absolute;
+      @apply h-full;
+      @apply w-full;
+      @apply object-cover;
+      @apply rounded-lg;
+    }
+
+    .post-card-content {
+      @apply flex-post-large-content;
+      @apply self-center
+    }
+
+      .post-card-title {
+        @apply text-4xl;
+      }
+
+      .post-card-excerpt {
+        @apply text-xl;
+      }
+  }
+
+}

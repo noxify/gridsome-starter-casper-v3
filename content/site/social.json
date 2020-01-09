@@ -1,0 +1,16 @@
+{
+  "social": [
+    {
+      "icon": "facebook",
+      "link": "https://www.facebook.com"
+    },
+    {
+      "icon": "twitter",
+      "link": "https://twitter.com/"
+    },
+    {
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com"
+    }
+  ]
+}
