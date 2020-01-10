@@ -6,7 +6,7 @@
       | Design by <a href="https://ghost.org" target="_blank" class="hover:text-white">Ghost</a>
       </div>
       <div class="w-full md:w-1/2">
-      <ul class="flex justify-center md:justify-end">
+      <ul class="list-none flex justify-center md:justify-end">
 
         <li 
           :key="element.name" 

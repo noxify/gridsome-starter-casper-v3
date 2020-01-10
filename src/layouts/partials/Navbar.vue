@@ -3,8 +3,8 @@
     <nav 
     class="flex items-center justify-between flex-wrap container mx-auto px-4 sm:px-0 py-4 transition-all transition-500" 
     v-bind:class="{
-      'opacity-100': !disableScroll && !postTitle && scrollPosition > headerHeight, 
-      'opacity-0': !disableScroll && !postTitle && scrollPosition < headerHeight
+      'opacity-100': !disableScroll && scrollPosition > headerHeight, 
+      'opacity-0': !disableScroll && scrollPosition < headerHeight
     }">
       <div class="block flex-grow flex items-center w-auto">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -13,11 +13,7 @@
         </div>
         <div class="text-sm flex-grow uppercase">
           <ul 
-          class="flex justify-left text-gray-300 uppercase transition-all transition-500" 
-          v-bind:class="{
-            'opacity-100': disableScroll && postTitle && scrollPosition <= headerHeight, 
-            'opacity-0 hidden': disableScroll && postTitle && scrollPosition > headerHeight,
-          }">
+          class="list-none flex justify-left text-gray-300 uppercase transition-all transition-500">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
@@ -34,15 +30,9 @@
               <g-link v-else :to="element.link" class="animated-link">{{element.name}}</g-link>
             </li>
           </ul>
-          <div class="transition-all transition-500 text-white" v-bind:class="{
-            'opacity-0 hidden': disableScroll && postTitle && scrollPosition <= headerHeight, 
-            'opacity-100': disableScroll && postTitle && scrollPosition > headerHeight
-          }">
-            {{ postTitle }}
-          </div>
         </div>
         <div class="invisible sm:visible inline-block text-gray-400">
-          <ul class="flex justify-center md:justify-end">
+          <ul class="list-none flex justify-center md:justify-end">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"
@@ -76,10 +66,6 @@ export default {
     disableScroll: {
       type: Boolean,
       default: false
-    },
-    postTitle: {
-      type: String,
-      default: null
     }
   },
   data: function() {
@@ -99,18 +85,11 @@ export default {
   },
 
   mounted() {
-    if( !this.disableScroll && this.postTitle === null ) {
+    if( !this.disableScroll ) {
       var height = document.getElementById("header").clientHeight;
       this.setHeaderHeight(height);
       window.addEventListener("scroll", this.updateScroll);
     }
-
-    if( this.postTitle !== null ) {
-      this.setHeaderHeight(300);
-      window.addEventListener("scroll", this.updateScroll);
-    }
-
-
   }
 };
 </script>

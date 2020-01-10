@@ -15,7 +15,7 @@ module.exports = {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {
           whitelist: ['svg-inline--fa'],
-          whitelistPatterns: [/fa-$/]
+          whitelistPatterns: [/fa-$/, /blockquote$/, /code$/, /pre$/]
         },
         presetEnvConfig: {},
         shouldPurge: true,
@@ -56,6 +56,18 @@ module.exports = {
       }
     }
   ],
+  transformers: {
+    remark: {
+      plugins: [
+        '@noxify/gridsome-remark-table-align',
+        ['@noxify/gridsome-remark-classes', {
+          'table': 'table table-striped',
+          'tableCell[align=center]': 'text-center',
+          'tableCell[align=right]': 'text-right'
+        }]
+      ]
+    }
+  },
   templates: {
     Blog: [{
       path: '/blog/:title'

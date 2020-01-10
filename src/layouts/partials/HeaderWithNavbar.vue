@@ -3,7 +3,7 @@
     <nav class="flex items-center justify-between flex-wrap container mx-auto px-4 sm:px-0 py-4">
       <div class="block flex-grow flex items-center w-auto height-30px">
         <div class="text-sm flex-grow uppercase">
-          <ul class="flex justify-left text-gray-300 uppercase">
+          <ul class="list-none flex justify-left text-gray-300 uppercase">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
@@ -22,7 +22,7 @@
           </ul>
         </div>
         <div class="invisible sm:visible inline-block text-gray-400">
-          <ul class="flex justify-center md:justify-end">
+          <ul class="list-none flex justify-center md:justify-end">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"

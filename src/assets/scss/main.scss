@@ -4,7 +4,7 @@ blockquote {
   @apply border-l;
   @apply border-l-4;
   @apply border-l-blue-500;
-  @apply pl-16;
+  @apply pl-4;
   @apply italic;
   @apply my-8;
 
@@ -22,6 +22,16 @@ pre {
   @apply text-base;
   @apply break-words;
   @apply overflow-x-auto;
+}
+
+ol {
+  @apply list-decimal;
+  @apply ml-5;
+}
+
+ul {
+  @apply list-disc;
+  @apply ml-5;
 }
 
 :not(pre)>code {

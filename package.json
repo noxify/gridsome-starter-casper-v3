@@ -10,6 +10,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
     "@noxify/gridsome-remark-classes": "^1.0.0",
+    "@noxify/gridsome-remark-table-align": "^1.0.0",
     "gridsome": "^0.7.0",
     "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
     "lodash": "^4.17.15",

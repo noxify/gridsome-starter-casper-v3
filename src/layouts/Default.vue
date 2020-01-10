@@ -2,7 +2,7 @@
   <div class="layout">
     <HeaderPartial v-if="hideHeader!=true"></HeaderPartial>
     <slot/>
-    <NavbarPartial :disableScroll="disableScroll" :postTitle="postTitle"></NavbarPartial>
+    <NavbarPartial :disableScroll="disableScroll"></NavbarPartial>
     <FooterPartial></FooterPartial>
   </div>
 </template>
@@ -28,10 +28,6 @@ export default {
     disableScroll: {
       type: Boolean,
       default: false
-    },
-    postTitle: {
-      type: String,
-      default: null
     }
   },
   components: {
