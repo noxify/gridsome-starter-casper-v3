@@ -11,7 +11,7 @@
         <div class="w-full md:w-5/6 text-center md:text-left md:pl-8 lg:pl-0">
           <h1 class="pb-0 mb-0 mt-0 text-4xl font-medium">{{ $page.author.name }}</h1>
           <p class="text-gray-700 text-xl" v-if="$page.author.bio">{{ $page.author.bio }}</p>
-          <div>
+          <div class="author-social">
             {{ $page.author.belongsTo.totalCount }} {{ postLabel }}
             &nbsp;&middot;&nbsp;
             <a

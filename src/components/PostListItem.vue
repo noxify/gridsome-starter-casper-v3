@@ -7,7 +7,7 @@
       <g-link :to="record.path">
         <p class="uppercase font-medium text-xs text-blue-700 mt-3">{{ record.category.title }}</p>
         <h2 class="post-card-title mt-0">
-          <g-link :to="record.path">{{ record.title }}</g-link>
+          {{ record.title }}
         </h2>
         <p class="post-card-excerpt">{{ record.excerpt }}</p>
       </g-link>

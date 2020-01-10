@@ -31,12 +31,16 @@
             </li>
           </ul>
         </div>
-        <div class="invisible sm:visible inline-block text-gray-400">
+        
+        <div class="inline-block text-gray-400">
           <ul class="list-none flex justify-center md:justify-end">
+            <li class="mr-0 sm:mr-6">
+              <theme-switcher />
+            </li>
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"
-              class="hover:text-white"
+              class="hover:text-white hidden sm:block"
               v-bind:class="{'mr-6' : index != Object.keys($static.metadata.social).length - 1}"
             >
               <span class="text-sm">
@@ -47,6 +51,7 @@
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
   </div>
@@ -61,7 +66,13 @@
  * Will be used to add/remove the additional
  * css classes to show the sticky navbar
  */
+
+import ThemeSwitcher from '~/components/ThemeSwitcher'
+
 export default {
+  components : {
+    ThemeSwitcher
+  },
   props: {
     disableScroll: {
       type: Boolean,

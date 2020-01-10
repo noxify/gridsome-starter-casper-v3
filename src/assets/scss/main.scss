@@ -142,3 +142,53 @@ ul {
   }
 
 }
+
+body[data-theme="dark"] {
+  
+    background-color: #191b1f;
+    @apply text-gray-300;
+
+    .post-content-text {
+      @apply text-gray-300;
+    }
+
+    .post-card-excerpt {
+      @apply text-gray-500;
+    }
+
+    .pagination li {
+      @apply bg-gray-700;
+      @apply text-gray-200;
+      @apply border-gray-600;
+
+      &:hover {
+        @apply bg-gray-600;
+        @apply text-gray-900;
+      }
+    }
+
+    .pagination li.border-l-black {
+      @apply border-l-gray-300;
+    }
+
+    pre {
+      @apply text-gray-500;
+    }
+
+    .flex-post {
+      @apply border-b-gray-800;
+    }
+
+    .author-list-item img {
+      border-color: #191b1f;
+    }
+
+    .author-social {
+      a {
+        &:hover {
+          @apply text-white
+        }
+      }
+    }
+  
+}
