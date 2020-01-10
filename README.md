@@ -1,15 +1,16 @@
 # Gridsome Casper V3 Starter
 
-Grisome starter based on [Ghost Casper V2](https://github.com/TryGhost/Casper) and tailwindcss.
+Grisome starter based on [Ghost Casper V3](https://github.com/TryGhost/Casper) and tailwindcss.
 
 ## Demo
-[https://gridsome-starter-casper-v2.now.sh/](https://gridsome-starter-casper-v3.now.sh/)
+[https://gridsome-starter-casper-v3.now.sh/](https://gridsome-starter-casper-v3.now.sh/)
 
 ## Features
 
 * Gridsome
 * Tailwindcss with some custom configuration
   * tailwindcss tables plugin
+* Light and Dark Mode with auto detect  
 * v-tooltip
 * SCSS
 * Markdown
