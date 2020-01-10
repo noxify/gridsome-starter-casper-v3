@@ -15,7 +15,7 @@ module.exports = {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {
           whitelist: ['svg-inline--fa'],
-          whitelistPatterns: [/fa-$/, /blockquote$/, /code$/, /pre$/]
+          whitelistPatterns: [/fa-$/, /blockquote$/, /code$/, /pre$/, /table$/, /table-$/]
         },
         presetEnvConfig: {},
         shouldPurge: true,
