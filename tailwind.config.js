@@ -159,7 +159,6 @@ module.exports = {
       })
     },
     require('tailwindcss-tables')(),
-    require('tailwindcss-gradients')(),
-    require('tailwindcss-transitions')()
+    require('tailwindcss-gradients')
   ]
 }

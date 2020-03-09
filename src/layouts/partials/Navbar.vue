@@ -35,7 +35,7 @@
         <div class="inline-block text-gray-400">
           <ul class="list-none flex justify-center md:justify-end">
             <li class="mr-0 sm:mr-6">
-              <theme-switcher />
+              <theme-switcher v-on="$listeners" :theme="theme"/>
             </li>
             <li
               :key="element.name"
@@ -59,7 +59,7 @@
 
 <script>
 /*
- * I'm a lzay guy, so i used this script
+ * I'm a lazy guy, so i used this script
  * https://codepen.io/ninaregli/pen/OjeMLP
  * to calculate the current scroll position
  *
@@ -77,6 +77,9 @@ export default {
     disableScroll: {
       type: Boolean,
       default: false
+    },
+    theme: {
+      type: String
     }
   },
   data: function() {

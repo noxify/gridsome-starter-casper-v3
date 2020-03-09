@@ -25,7 +25,7 @@
         <div class="inline-block text-gray-400">
           <ul class="list-none flex justify-center md:justify-end">
             <li class="mr-0 sm:mr-6">
-              <theme-switcher />
+              <theme-switcher v-on="$listeners" :theme="theme"/>
             </li>
             <li
               :key="element.name"
@@ -62,6 +62,11 @@
 import ThemeSwitcher from '~/components/ThemeSwitcher'
 
 export default {
+  props: {
+    theme: {
+      type: String,
+    },
+  },
   components : {
     ThemeSwitcher
   }

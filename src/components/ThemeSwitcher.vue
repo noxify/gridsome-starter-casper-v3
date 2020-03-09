@@ -14,11 +14,12 @@
 let themes = ['light', 'dark']
 
 export default {
-  data() {
-    return {
-      theme: 'light',
-    }
+  props: {
+    theme: {
+      type: String,
+    },
   },
+
   computed: {
     nextTheme() {
       const currentIndex = themes.indexOf(this.theme)
@@ -31,12 +32,13 @@ export default {
       const currentIndex = themes.indexOf(this.theme);
       const nextIndex = (currentIndex + 1) % themes.length;
       window.__setPreferredTheme(themes[nextIndex])
-      this.theme = themes[nextIndex]
+
+      this.$emit('setTheme', themes[nextIndex])
     }
   },
   async mounted() {
     // set default
-    if (typeof window.__theme !== 'undefined') this.theme = window.__theme
+    if (typeof window.__theme !== 'undefined') this.$emit('setTheme', window.__theme)
   }
 }
 </script>

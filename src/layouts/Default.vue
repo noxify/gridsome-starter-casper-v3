@@ -1,8 +1,8 @@
 <template>
   <div id="app" dark>
-    <HeaderPartial v-if="hideHeader!=true"></HeaderPartial>
+    <HeaderPartial v-if="hideHeader!=true" @setTheme="setTheme" :theme="this.theme"></HeaderPartial>
     <slot/>
-    <NavbarPartial :disableScroll="disableScroll" ></NavbarPartial>
+    <NavbarPartial :disableScroll="disableScroll" @setTheme="setTheme" :theme="this.theme"></NavbarPartial>
     <FooterPartial></FooterPartial>
   </div>
 </template>
@@ -29,6 +29,16 @@ export default {
     disableScroll: {
       type: Boolean,
       default: false
+    }
+  },
+  data: function() {
+    return {
+      theme: 'light'
+    };
+  },
+  methods: {
+    setTheme(mode) {
+        this.theme = mode
     }
   },
   components: {
