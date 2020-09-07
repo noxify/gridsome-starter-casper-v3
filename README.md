@@ -3,7 +3,7 @@
 Grisome starter based on [Ghost Casper V3](https://github.com/TryGhost/Casper) and tailwindcss.
 
 ## Demo
-[https://gridsome-starter-casper-v3.now.sh/](https://gridsome-starter-casper-v3.now.sh/)
+[https://casper.jammeryhq.com/](https://casper.jammeryhq.com)
 
 ## Features
 
@@ -40,7 +40,7 @@ With Gridsome offering a plugin-rich ecosystem, there are a few key plugins that
 
 ### 2. Create a Gridsome project
 
-1. `gridsome create my-blog https://github.com/noxify/gridsome-starter-casper-v3` to install gridsome with this starter
+1. `gridsome create my-blog https://github.com/jammeryhq/gridsome-starter-casper-v3` to install gridsome with this starter
 2. `cd my-blog` to open the folder
 3. `gridsome develop` to start a local dev server at `http://localhost:8080`
 4. Happy coding 🎉🙌
